@@ -1,9 +1,9 @@
 <template>
-    <section class="section hero" style="background-image: url('./assets/images/hero-banner.png')">
+    <section class="section hero" :style="{ backgroundImage: `url(${heroImgPNG})`}">
         <div class="container">
 
             <h2 class="h1 hero-title">
-                New Summer <strong>Shoes Collection</strong>
+                {{ title }} <strong> {{ secondTitle }} </strong>
             </h2>
 
             <p class="hero-text">
@@ -21,3 +21,23 @@
         </div>
     </section>
 </template>
+
+<script>
+import heroImgPNG from '@/assets/images/hero-banner.png'
+export default {
+    name: 'HeroSection',
+    props: {
+        title: {
+            type: String,
+            default: 'New Summer'
+        },
+        secondTitle: {
+            type: String,
+            default: ''
+        }
+    },
+    setup() {
+        return {heroImgPNG}
+    }
+}
+</script>

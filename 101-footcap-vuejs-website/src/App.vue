@@ -8,7 +8,7 @@
       <article>
 
         <!-- Hero Section -->
-         <HeroSection />
+         <HeroSection title="Some title" secondTitle="Shoes Collection"/>
 
         <!-- 
         - #COLLECTION
