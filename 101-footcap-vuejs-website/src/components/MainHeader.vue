@@ -24,28 +24,8 @@
 
                 <ul class="navbar-list">
 
-                    <li class="navbar-item">
-                        <a href="#" class="navbar-link">Home</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="#" class="navbar-link">About</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="#" class="navbar-link">Products</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="#" class="navbar-link">Shop</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="#" class="navbar-link">Blog</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="#" class="navbar-link">Contact</a>
+                    <li v-for="menuItem in menuItems" :key="menuItem.href" class="navbar-item">
+                        <a :href="menuItem.href" class="navbar-link">{{ menuItem.text }}</a>
                     </li>
 
                 </ul>
@@ -98,7 +78,7 @@
 
 <script>
 import logoSVG from '@/assets/images/logo.svg'
-import { reactive } from 'vue';
+import { reactive, ref } from 'vue';
 
 export default {
     setup() {
@@ -107,7 +87,17 @@ export default {
             alt: 'Footcop logo'
         });
 
-        return {logo}
+        const menuItems = ref([
+            {href: '#home', text: 'Home'},
+            {href: '#about', text: 'About'},
+            {href: '#products', text: 'Product'},
+            {href: '#shop', text: 'Shop'},
+            {href: '#blog', text: 'Blog'},
+            {href: '#contact', text: 'Contact'},
+
+        ]);
+
+        return {logo, menuItems}
     }
 }
 </script>
