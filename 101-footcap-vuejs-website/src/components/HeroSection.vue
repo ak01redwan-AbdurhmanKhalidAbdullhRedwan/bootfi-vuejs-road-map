@@ -12,7 +12,7 @@
                 expanded array of leadership.
             </p>
 
-            <PrimaryButton label="Shop Now" ion-icon-name="arrow-forward-outline"/>
+            <MainButton label="Shop Now" ion-icon-name="arrow-forward-outline"/>
 
         </div>
     </section>
@@ -20,7 +20,7 @@
 
 <script>
 import heroImgPNG from '@/assets/images/hero-banner.png'
-import PrimaryButton from './PrimaryButton.vue';
+import MainButton from './MainButton.vue';
 
 export default {
     name: 'HeroSection',
@@ -38,7 +38,7 @@ export default {
         return {heroImgPNG}
     },
     components: {
-        PrimaryButton
+        MainButton
     }
 }
 </script>
