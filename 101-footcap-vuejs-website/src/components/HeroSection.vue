@@ -27,7 +27,7 @@ export default {
     props: {
         title: {
             type: String,
-            default: 'New Summer'
+            default: 'Some Title'
         },
         secondTitle: {
             type: String,
